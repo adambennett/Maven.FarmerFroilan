@@ -3,9 +3,12 @@ package com.zipcodewilmington.froilansfarm;
 import java.util.ArrayList;
 
 public class Stable {
+    public ArrayList<Horse> horses;
 
-    private ArrayList<Horse> horseys = new ArrayList<>();
-
+    public Stable() {
+        this.horses = new ArrayList<Horse>();;
+    }
+  
     public void add(Horse horse) {
         horseys.add(horse);
     }
