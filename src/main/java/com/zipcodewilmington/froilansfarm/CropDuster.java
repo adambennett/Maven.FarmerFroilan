@@ -11,4 +11,13 @@ public class CropDuster implements FarmVehicle, Aircraft {
     }
 
 
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void operate(Farm farm) {
+
+    }
 }

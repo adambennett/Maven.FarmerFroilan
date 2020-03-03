@@ -25,4 +25,8 @@ public class Crop implements Produce {
 
     private boolean hasBeenFertilized;
 
+    @Override
+    public Edible yield() {
+        return null;
+    }
 }

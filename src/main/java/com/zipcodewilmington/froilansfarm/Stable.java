@@ -10,14 +10,14 @@ public class Stable {
     }
   
     public void add(Horse horse) {
-        horseys.add(horse);
+        horses.add(horse);
     }
 
     public ArrayList<Horse> getHorseys() {
-        return horseys;
+        return horses;
     }
 
     public void setHorseys(ArrayList<Horse> horseys) {
-        this.horseys = horseys;
+        this.horses = horseys;
     }
 }

@@ -14,12 +14,12 @@ public class SundayTest
     @Before
     public void setup() {
         farm = new Farm();
-        froilan = new Froilan();
+        //froilan = new Froilan();
     }
 
     @Test
     public void test() {
-        Stable staba = new Stable();
+        /*Stable staba = new Stable();
         Stable stablee = new Stable();
         Stable stab = new Stable();
         farm.getStabs().add(staba);
@@ -44,7 +44,7 @@ public class SundayTest
                 froilan.feed(h, new EarCorn(), 3);
             }
         }
-
+*/
 
 
 

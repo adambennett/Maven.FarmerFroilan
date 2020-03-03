@@ -10,4 +10,8 @@ public class Tractor implements Vehicle, FarmVehicle {
         return null;
     }
 
+    @Override
+    public void operate(Farm farm) {
+
+    }
 }
