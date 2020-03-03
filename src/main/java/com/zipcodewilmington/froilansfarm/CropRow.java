@@ -7,7 +7,7 @@ public class CropRow {
     private ArrayList<Crop> newCrop;
 
     public CropRow() {
-        
+
         this.newCrop = new ArrayList<>();
     }
 

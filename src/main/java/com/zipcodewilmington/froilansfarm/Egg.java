@@ -1,12 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Egg {
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 
-    public boolean hasBeenHarvested(){
-        return true;
-    }
+public class Egg implements Edible {
 
-    public boolean hasBeenFertilized(){
-        return true;
-    }
+
 }

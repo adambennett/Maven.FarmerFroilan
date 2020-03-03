@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class ChickenCoop {
 
+    private ArrayList<Integer> chickenCoop;
+
     public ChickenCoop() {
 
         this.chickenCoop = new ArrayList<>();
@@ -17,5 +19,5 @@ public class ChickenCoop {
         this.chickenCoop = chickenCoop;
     }
 
-    private ArrayList<Integer> chickenCoop;
+
 }
