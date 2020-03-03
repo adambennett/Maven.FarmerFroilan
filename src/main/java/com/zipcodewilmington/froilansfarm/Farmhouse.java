@@ -9,6 +9,10 @@ public class Farmhouse {
         this.people = people;
     }
 
+    public Farmhouse() {
+
+    }
+
     public ArrayList<Person> getPeople() {
         return people;
     }
