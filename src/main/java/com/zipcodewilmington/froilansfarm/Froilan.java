@@ -4,7 +4,10 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 public class Froilan extends Farmer implements Rider {
 
-    public Froilan(Farm farm) {
-        super(farm);
+
+    public Froilan() {
+
     }
+
+
 }

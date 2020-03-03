@@ -59,4 +59,6 @@ public class Farm {
     public void setVehics(ArrayList<Vehicle> vehics) {
         this.vehics = vehics;
     }
+
+
 }

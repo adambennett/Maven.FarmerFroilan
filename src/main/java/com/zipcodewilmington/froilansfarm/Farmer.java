@@ -5,8 +5,8 @@ import com.zipcodewilmington.froilansfarm.interfaces.*;
 public class Farmer extends Person implements Eater, Botanist, Rider {
     private Farm farm;
 
-    public Farmer(Farm farm) {
-        this.farm = farm;
+    public Farmer() {
+
     }
 
     public void feed(Animal animal, Edible food) {
@@ -40,5 +40,13 @@ public class Farmer extends Person implements Eater, Botanist, Rider {
     @Override
     public void eatFood(Edible food) {
 
+    }
+
+    public Farm getFarm() {
+        return farm;
+    }
+
+    public void setFarm(Farm farm) {
+        this.farm = farm;
     }
 }
