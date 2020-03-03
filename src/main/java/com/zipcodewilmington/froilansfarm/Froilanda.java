@@ -1,4 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Froilanda {
+import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
+
+public class Froilanda implements Pilot {
+    private CropDuster cropDuster;
+
+
 }
