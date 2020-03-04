@@ -10,8 +10,6 @@ public class TestChickenCoop {
     public void testChickenCoop() {
         ChickenCoop newChickenCoop = new ChickenCoop();
         ArrayList<Integer> cc = new ArrayList<>();
-        newChickenCoop.setChickenCoop(cc);
-
         Assert.assertEquals(cc, newChickenCoop.getChickenCoop());
     }
 

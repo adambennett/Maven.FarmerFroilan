@@ -2,16 +2,19 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.interfaces.Vehicle;
 
-public class Tractor implements Vehicle, FarmVehicle {
+public class Tractor implements Vehicle, FarmVehicle, Rideable {
 
-    public Edible harvest(Crop crop) {
-        return null;
+    public void harvest(Crop crop) {
+        Silo.harvestAndAdd(crop);
     }
 
     @Override
     public void operate(Farm farm) {
 
     }
+
+
 }
