@@ -73,7 +73,9 @@ public class WeeklyTest
             }
 
             int actual = Silo.getNum();
+            Silo.getSilo().clear();
             Assert.assertEquals(expected, actual);
+
     }
 
     @Test
@@ -90,6 +92,19 @@ public class WeeklyTest
         Integer actual = froilan.sell(toSell,2);
         froilan.ride(basketball);
         Assert.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void FridayTest() {
+
+        froilan = new Froilan();
+        Farm farm = new Farm();
+        for(ChickenCoop cc : farm.getChickenCoops()){
+            for(Chicken c : cc.getChickenCoop()){
+                froilan.collect(new Egg());
+                froilan.collect(new Egg());
+            }
+        }
 
     }
     }
