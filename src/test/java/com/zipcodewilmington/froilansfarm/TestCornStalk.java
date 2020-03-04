@@ -3,10 +3,11 @@ package com.zipcodewilmington.froilansfarm;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestBeanStalk {
+public class TestCornStalk {
+
     @Test
     public void testInheritance() {
-        BeanStalk newBeanStalk = new BeanStalk();
-        Assert.assertTrue(newBeanStalk instanceof Crop);
+        CornStalk cornStalk = new CornStalk();
+        Assert.assertTrue(cornStalk instanceof Crop);
     }
 }
