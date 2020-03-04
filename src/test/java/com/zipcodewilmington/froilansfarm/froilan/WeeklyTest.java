@@ -1,10 +1,13 @@
 package com.zipcodewilmington.froilansfarm.froilan;
 
 import com.zipcodewilmington.froilansfarm.*;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.logging.Logger;
 
 public class WeeklyTest
 {
@@ -17,6 +20,7 @@ public class WeeklyTest
         froilan = new Froilan();
         Field field = new Field();
         farm.setField(field);
+        froilan.setFarm(farm);
         for (int i=0; i<5; i++){
             CropRow row = new CropRow();
             farm.getField().getCropRow().add(row);
@@ -39,10 +43,6 @@ public class WeeklyTest
         froilan.eatFood(new Egg());
         froilan.eatFood(new Egg());
         froilan.eatFood(new Egg());
-
-
-
-
     }
 
     @Test
@@ -59,6 +59,39 @@ public class WeeklyTest
      froilan.plantCrop(new CornStalk(), row5);
     }
 
+    @Test
+    public void TuesdayTest() {
+            Tractor tractor = new Tractor();
+            froilan.ride(tractor);
+            int expected = 0;
+            for (CropRow cropRow : farm.getField().getCropRow()) {
 
-}
+                for (Crop o : cropRow.getNewCrop()) {
+                    tractor.harvest(o);
+                    expected++;
+                }
+            }
+
+            int actual = Silo.getNum();
+            Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void ThursdayTest() {
+        // Fake harvest
+        Silo.harvestAndAdd(new CornStalk());
+        Silo.harvestAndAdd(new BeanStalk());
+        froilan = new Froilan();
+        Horse basketball = new Horse("Basketball");
+        froilan.ride(basketball);
+        String toSell = Silo.mostAbundant();
+        Logger.getGlobal().info(toSell);
+        Integer expected = 2;
+        Integer actual = froilan.sell(toSell,2);
+        froilan.ride(basketball);
+        Assert.assertEquals(expected, actual);
+
+    }
+    }
+
 

@@ -47,6 +47,20 @@ public class WeeklyTest {
         }
     }
 
+    @Test
+    public void testWednesday() {
+        froilanda = new Froilanda();
+        Farm farm = new Farm();
+        for(ChickenCoop cc : farm.getChickenCoops()){
+            for(Chicken c : cc.getChickenCoop()){
+                froilanda.collect(new Egg());
+                froilanda.collect(new Egg());
+            }
+        }
+
+    }
+
+
 
 
 }

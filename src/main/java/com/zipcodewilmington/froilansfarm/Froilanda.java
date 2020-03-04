@@ -10,7 +10,7 @@ public class Froilanda extends Farmer implements Pilot, Eater {
 
     @Override
     public void eatFood(Edible food) {
-
+        Silo.removeFrom(food.toString(), 1);
     }
 
     public CropDuster getCropDuster() {
