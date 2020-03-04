@@ -10,7 +10,7 @@ public class Farmhouse {
     }
 
     public Farmhouse() {
-
+        people = new ArrayList<>();
     }
 
     public ArrayList<Person> getPeople() {
