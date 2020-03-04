@@ -83,7 +83,7 @@ public class WeeklyTest {
     public void TuesdayTest() {
         Tractor tractor = new Tractor();
         froilan.ride(tractor);
-        int expected = 0;
+        int expected = 128;
         for (CropRow cropRow : farm.getField().getCropRow()) {
 
             for (Crop o : cropRow.getNewCrop()) {
@@ -118,7 +118,7 @@ public class WeeklyTest {
         froilan = new Froilan();
         Farm farm = new Farm();
         froilan.setFarm(farm);
-        Integer expected = 32;
+        Integer expected = 128;
         for(ChickenCoop cc : farm.getChickenCoops()){
             for(Chicken c : cc.getChickenCoop()){
                 froilan.collect(new Egg());
