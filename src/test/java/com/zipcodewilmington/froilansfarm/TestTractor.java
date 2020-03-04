@@ -42,10 +42,10 @@ public class TestTractor {
     public void testHarvest(){
         // Given
         tractor.harvest(crop);
-        Integer expected = 1;
+        Integer expected = 97;
 
         // When
-        Integer actual = silo.getSilo().size();
+        Integer actual = silo.getNum();
 
         // Then
         Assert.assertEquals(expected, actual);
