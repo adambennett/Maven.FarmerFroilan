@@ -4,12 +4,26 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Silo {
+public final class Silo {
     private static Map<String, Integer> inventory = new HashMap<String, Integer>();
     private static Integer minEggs = 49;
     private static Integer minCorn = 21;
     private static Integer minTomatos = 21;
     private static Integer minBeans = 5;
+    private static Silo instance;
+
+    static {
+        try {
+            instance = new Silo();
+            // Add stuff to silo here
+        } catch(Exception e) {
+            throw new RuntimeException("Exception occured in static initialization of Silo instance");
+        }
+    }
+
+    private Silo() {}
+
+    public static Silo getInstance() { return instance;  }
 
     public static Integer getNum() {
         int sum = 0;
@@ -79,8 +93,6 @@ public class Silo {
         }
         return cropName;
     }
-
-
 
     public static Boolean contains(String crop) {
         return inventory.containsKey(crop);
