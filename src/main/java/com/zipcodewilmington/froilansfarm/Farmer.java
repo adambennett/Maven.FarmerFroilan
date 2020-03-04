@@ -1,4 +1,52 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Farmer {
+import com.zipcodewilmington.froilansfarm.interfaces.*;
+
+public class Farmer extends Person implements Eater, Botanist, Rider {
+    private Farm farm;
+
+    public Farmer() {
+
+    }
+
+    public void feed(Animal animal, Edible food) {
+        feed(animal, food, 1);
+    }
+
+    public void feed(Animal animal, Edible food, int amt) {
+
+    }
+
+    @Override
+    public void mount(Rideable thing) {
+
+    }
+
+    @Override
+    public void dismount(Rideable thing) {
+
+    }
+
+    @Override
+    public void ride(Horse h) {
+
+    }
+
+    @Override
+    public void plantCrop(Crop crop, CropRow row) {
+
+    }
+
+    @Override
+    public void eatFood(Edible food) {
+
+    }
+
+    public Farm getFarm() {
+        return farm;
+    }
+
+    public void setFarm(Farm farm) {
+        this.farm = farm;
+    }
 }
