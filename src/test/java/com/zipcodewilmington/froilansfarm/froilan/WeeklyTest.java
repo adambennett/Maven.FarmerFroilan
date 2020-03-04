@@ -47,16 +47,40 @@ public class WeeklyTest
 
     @Test
     public void SundayTest() {
-     CropRow row1 = new CropRow();
-     CropRow row2 = new CropRow();
-     CropRow row3 = new CropRow();
-     CropRow row4 = new CropRow();
-     CropRow row5 = new CropRow();
-     froilan.plantCrop(new CornStalk(), row1);
-     froilan.plantCrop(new TomatoPlant(), row2);
-     froilan.plantCrop(new BeanStalk(), row3);
-     froilan.plantCrop(new TomatoPlant(), row4);
-     froilan.plantCrop(new CornStalk(), row5);
+        CropRow row1 = new CropRow();
+        CropRow row2 = new CropRow();
+        CropRow row3 = new CropRow();
+        CropRow row4 = new CropRow();
+        CropRow row5 = new CropRow();
+        CornStalk cornstalk = new CornStalk();
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        TomatoPlant tomatoPlantB = new TomatoPlant();
+        CornStalk cornstalkB= new CornStalk();
+        BeanStalk beanStalk = new BeanStalk();
+        froilan.plantCrop(cornstalk, row1);
+        froilan.plantCrop(tomatoPlant, row2);
+        froilan.plantCrop(beanStalk, row3);
+        froilan.plantCrop(tomatoPlantB, row4);
+        froilan.plantCrop(cornstalkB, row5);
+        for (Crop c : row1.getNewCrop()) {
+            Assert.assertTrue(c.toString().equals(cornstalk.toString()));
+        }
+
+        for (Crop c : row2.getNewCrop()) {
+            Assert.assertTrue(c.toString().equals(tomatoPlant.toString()));
+        }
+
+        for (Crop c : row3.getNewCrop()) {
+            Assert.assertTrue(c.toString().equals(beanStalk.toString()));
+        }
+
+        for (Crop c : row4.getNewCrop()) {
+            Assert.assertTrue(c.toString().equals(tomatoPlantB.toString()));
+        }
+
+        for (Crop c : row5.getNewCrop()) {
+            Assert.assertTrue(c.toString().equals(cornstalkB.toString()));
+        }
     }
 
     @Test
@@ -96,17 +120,19 @@ public class WeeklyTest
     }
     @Test
     public void FridayTest() {
-
         froilan = new Froilan();
         Farm farm = new Farm();
+        froilan.setFarm(farm);
+        Integer expected = 32;
         for(ChickenCoop cc : farm.getChickenCoops()){
             for(Chicken c : cc.getChickenCoop()){
                 froilan.collect(new Egg());
                 froilan.collect(new Egg());
             }
         }
-
+        Integer actual = Silo.getNum();
+        Assert.assertEquals(expected, actual);
     }
-    }
+}
 
 

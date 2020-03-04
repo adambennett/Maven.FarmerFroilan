@@ -48,7 +48,9 @@ public class WeeklyTest {
             froilanda.getCropDuster().fertilize(cropRow);
         }
         for(CropRow cropRow : farm.getField().getCropRow()){
-            Assert.assertTrue(cropRow.);
+            for (Crop c : cropRow.getNewCrop()) {
+                Assert.assertTrue(c.isHasBeenFertilized());
+            }
         }
 
     }
