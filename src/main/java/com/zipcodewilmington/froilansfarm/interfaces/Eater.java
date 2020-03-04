@@ -1,6 +1,10 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
+import com.zipcodewilmington.froilansfarm.Silo;
+
 public interface Eater {
 
-    public void eatFood(Edible food);
+    default void eatFood(Edible food) {
+        Silo.removeFrom(food.toString(), 1);
+    }
 }
