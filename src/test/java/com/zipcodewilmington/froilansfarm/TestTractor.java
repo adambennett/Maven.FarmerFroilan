@@ -21,7 +21,7 @@ public class TestTractor {
     @Before
     public void setup(){
         this.tractor = new Tractor();
-        this.silo = new Silo();
+        this.silo = Silo.getInstance();
         this.crop = new TomatoPlant();
     }
 
