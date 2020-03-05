@@ -1,0 +1,21 @@
+package com.zipcodewilmington.froilansfarm.farm;
+
+import com.zipcodewilmington.froilansfarm.farm.CropDuster;
+import com.zipcodewilmington.froilansfarm.interfaces.Aircraft;
+import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
+import org.junit.Assert;
+import org.junit.Test;
+
+public class TestCropDuster {
+    @Test
+    public void testImplementationFarmVehicle() {
+        CropDuster cropDuster = new CropDuster();
+        Assert.assertTrue(cropDuster instanceof FarmVehicle);
+    }
+
+    @Test
+    public void testImplementationAircraft() {
+        CropDuster cropDuster = new CropDuster();
+        Assert.assertTrue(cropDuster instanceof Aircraft);
+    }
+}

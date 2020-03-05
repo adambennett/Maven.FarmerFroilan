@@ -1,4 +1,3 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface Pilot {
-}
+public interface Pilot {}

@@ -1,3 +1,3 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface FarmVehicle extends Vehicle { }
+public interface Animal extends NoiseMaker, Eater { }
