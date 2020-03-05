@@ -5,10 +5,6 @@ import java.util.ArrayList;
 public class Farmhouse {
     private ArrayList<Person> people;
 
-    public Farmhouse(ArrayList<Person> people) {
-        this.people = people;
-    }
-
     public Farmhouse() {
         people = new ArrayList<>();
     }

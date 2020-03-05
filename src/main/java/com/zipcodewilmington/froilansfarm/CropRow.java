@@ -4,18 +4,22 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-    private ArrayList<Crop> newCrop;
+    private ArrayList<Crop> crops;
 
     public CropRow() {
 
-        this.newCrop = new ArrayList<>();
+        this.crops = new ArrayList<>();
     }
 
-    public ArrayList<Crop> getNewCrop() {
-        return newCrop;
+    public void add(Crop crop) {
+        this.crops.add(crop);
     }
 
-    public void setNewCrop(ArrayList<Crop> newCrop) {
-        this.newCrop = newCrop;
+    public ArrayList<Crop> getCrops() {
+        return crops;
+    }
+
+    public void setCropsList(ArrayList<Crop> newCrop) {
+        this.crops = newCrop;
     }
 }

@@ -7,9 +7,9 @@ import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
 public class Froilanda extends Farmer implements Pilot, Eater {
     private CropDuster cropDuster;
 
-
-
-
+    public Froilanda() {
+        cropDuster = new CropDuster();
+    }
 
     public CropDuster getCropDuster() {
         return cropDuster;
@@ -17,9 +17,5 @@ public class Froilanda extends Farmer implements Pilot, Eater {
 
     public void setCropDuster(CropDuster cropDuster) {
         this.cropDuster = cropDuster;
-    }
-
-    public Boolean inspectCropDuster(){
-        return true;
     }
 }

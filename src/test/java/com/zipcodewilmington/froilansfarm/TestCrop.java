@@ -1,36 +1,33 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.PrimitiveIterator;
 
 public class TestCrop {
     @Test
     public void testImplementation() {
-        Crop crop = new Crop();
+        Crop crop = new CornStalk();
         Assert.assertTrue(crop instanceof Produce);
     }
 
     @Test
     public void testHasBeenHarvested() {
-        Crop crop = new Crop();
-        crop.setHasBeenHarvested(true);
+        Crop crop = new BeanStalk();
+        crop.setHarvested(true);
 
         Boolean expected = true;
-        Boolean actual = crop.isHasBeenHarvested();
+        Boolean actual = crop.isHarvested();
 
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testHasBeenFertilized() {
-        Crop crop = new Crop();
-        crop.setHasBeenFertilized(false);
+        Crop crop = new TomatoPlant();
+        crop.setFertilized(false);
 
         Boolean expected = false;
-        Boolean actual = crop.isHasBeenFertilized();
+        Boolean actual = crop.isFertilized();
 
         Assert.assertEquals(expected, actual);
     }

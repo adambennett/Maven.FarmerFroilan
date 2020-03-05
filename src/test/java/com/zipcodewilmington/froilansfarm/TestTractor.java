@@ -1,16 +1,11 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.interfaces.Vehicle;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import javax.sound.midi.Track;
-import java.util.HashMap;
-import java.util.Map;
 
 public class TestTractor {
 
@@ -21,7 +16,7 @@ public class TestTractor {
     @Before
     public void setup(){
         this.tractor = new Tractor();
-        this.silo = Silo.getInstance();
+        this.silo = Silo.getGlobal();
         this.crop = new TomatoPlant();
     }
 
@@ -42,7 +37,7 @@ public class TestTractor {
     public void testHarvest(){
         // Given
         tractor.harvest(crop);
-        Integer expected = 97;
+        Integer expected = 77;
 
         // When
         Integer actual = silo.getNum();

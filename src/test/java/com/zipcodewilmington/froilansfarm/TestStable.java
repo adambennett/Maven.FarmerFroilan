@@ -13,19 +13,19 @@ public class TestStable {
         Stable stable = new Stable();
 
         // Then
-        Assert.assertNotNull(stable.getHorseys());
+        Assert.assertNotNull(stable.getHorses());
     }
 
     @Test
     public void testAdd(){
         // Given
         Stable stable = new Stable();
-        Horse horse = new Horse("Bob");
+        Horse horse = new Horse();
         Integer expected = 1;
 
         // When
         stable.add(horse);
-        Integer actual = stable.getHorseys().size();
+        Integer actual = stable.getHorses().size();
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -34,8 +34,8 @@ public class TestStable {
     @Test
     public void testGetHorsey(){
         // Given
-        Horse horse = new Horse("Bob");
-        Horse horse1 = new Horse("Fred");
+        Horse horse = new Horse();
+        Horse horse1 = new Horse();
         ArrayList<Horse> horseys = new ArrayList<>();;
         horseys.add(horse);
         horseys.add(horse1);
@@ -43,7 +43,7 @@ public class TestStable {
         Integer expected = 2;
 
         // When
-        stable.setHorseys(horseys);
+        stable.setHorseList(horseys);
         Integer actual = horseys.size();
 
         // Then

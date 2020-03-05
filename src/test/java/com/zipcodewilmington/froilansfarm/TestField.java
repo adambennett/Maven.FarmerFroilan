@@ -12,8 +12,8 @@ public class TestField {
         Field field = new Field();
         ArrayList<CropRow> row1 = new ArrayList<>();
 
-        field.setCropRow(row1);
+        field.setCropRows(row1);
 
-        Assert.assertEquals(row1, field.getCropRow());
+        Assert.assertEquals(row1, field.getCropRows());
     }
 }

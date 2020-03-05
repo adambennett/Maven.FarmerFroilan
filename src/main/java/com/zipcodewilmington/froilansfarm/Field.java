@@ -4,17 +4,20 @@ import java.util.ArrayList;
 
 public class Field {
 
-    private ArrayList<CropRow> cropRow;
+    private ArrayList<CropRow> cropRows;
 
     public Field() {
-        cropRow = new ArrayList<>();
+        cropRows = new ArrayList<>();
+        cropRows.add(new CropRow());
+        cropRows.add(new CropRow());
+        cropRows.add(new CropRow());
     }
 
-    public ArrayList<CropRow> getCropRow() {
-        return cropRow;
+    public ArrayList<CropRow> getCropRows() {
+        return cropRows;
     }
 
-    public void setCropRow(ArrayList<CropRow> cropRow) {
-        this.cropRow = cropRow;
+    public void setCropRows(ArrayList<CropRow> cropRows) {
+        this.cropRows = cropRows;
     }
 }

@@ -11,8 +11,8 @@ public class TestCropRow {
         CropRow cropRow1 = new CropRow();
         ArrayList<Crop> cropList = new ArrayList<>();
 
-        cropRow1.setNewCrop(cropList);
+        cropRow1.setCropsList(cropList);
 
-        Assert.assertEquals(cropList, cropRow1.getNewCrop());
+        Assert.assertEquals(cropList, cropRow1.getCrops());
     }
 }

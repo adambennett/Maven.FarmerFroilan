@@ -6,20 +6,16 @@ import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 public class CropDuster implements FarmVehicle, Aircraft {
 
     public void fertilize(CropRow newCropRow){
-        for(Crop c : newCropRow.getNewCrop()){
-            c.setHasBeenFertilized(true);
+        for(Crop c : newCropRow.getCrops()){
+            c.setFertilized(true);
         }
 
     }
 
-
     @Override
-    public void fly() {
-
-    }
-
-    @Override
-    public void operate(Farm farm) {
-
+    public void fly(Field field) {
+        for (CropRow row : field.getCropRows()) {
+            fertilize(row);
+        }
     }
 }

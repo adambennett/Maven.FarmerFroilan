@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import java.util.ArrayList;
 
 public class Stable {
-    public ArrayList<Horse> horses;
+    private ArrayList<Horse> horses;
 
     public Stable() {
         this.horses = new ArrayList<Horse>();;
@@ -13,11 +13,11 @@ public class Stable {
         horses.add(horse);
     }
 
-    public ArrayList<Horse> getHorseys() {
+    public ArrayList<Horse> getHorses() {
         return horses;
     }
 
-    public void setHorseys(ArrayList<Horse> horseys) {
+    public void setHorseList(ArrayList<Horse> horseys) {
         this.horses = horseys;
     }
 }

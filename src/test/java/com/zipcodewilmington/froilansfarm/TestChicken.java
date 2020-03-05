@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 import org.junit.Assert;
 import org.junit.Test;
 

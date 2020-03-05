@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class Farm {
 
-    private ArrayList<ChickenCoop> chickenCoops;
     private Field field;
     private Farmhouse house;
     private ArrayList<Stable> stabs;
     private ArrayList<Vehicle> vehics;
+    private ArrayList<ChickenCoop> chickenCoops;
 
     public Farm() {
         stabs = new ArrayList<>();
@@ -32,8 +32,6 @@ public class Farm {
     public void setChickenCoops(ArrayList<ChickenCoop> chickenCoops) {
         this.chickenCoops = chickenCoops;
     }
-
-
 
     public Field getField() {
         return field;

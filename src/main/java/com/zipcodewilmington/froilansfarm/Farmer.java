@@ -9,30 +9,16 @@ public class Farmer extends Person implements Eater, Botanist, Rider {
 
     }
 
-    public void feed(Animal animal, Edible food) {
-        feed(animal, food, 1);
-    }
-
     public void feed(Animal animal, Edible food, int amt) {
 
     }
 
-    public void collect(Edible crop) {
-        Silo.increment(crop.toString());
+    public void collect(Edible edible) {
+        Silo.getGlobal().putInSilo(edible);
     }
 
-    public Integer sell(String crop, int num){
-        return Silo.removeFrom(crop,num);
-    }
-
-    @Override
-    public void mount(Rideable thing) {
-
-    }
-
-    @Override
-    public void dismount(Rideable thing) {
-
+    public Integer sell(Edible edible, int num){
+        return Silo.getGlobal().removeFrom(edible,num);
     }
 
     @Override
@@ -40,16 +26,9 @@ public class Farmer extends Person implements Eater, Botanist, Rider {
 
     }
 
-
-
     @Override
     public void plantCrop(Crop crop, CropRow row) {
-
-    }
-
-    @Override
-    public void eatFood(Edible food) {
-
+        row.add(crop);
     }
 
     public Farm getFarm() {
