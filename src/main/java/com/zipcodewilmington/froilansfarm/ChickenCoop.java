@@ -4,20 +4,24 @@ import java.util.ArrayList;
 
 public class ChickenCoop {
 
-    private ArrayList<Integer> chickenCoop;
+    private ArrayList<Chicken> chickenCoop;
 
     public ChickenCoop() {
 
         this.chickenCoop = new ArrayList<>();
     }
 
-    public ArrayList<Integer> getChickenCoop() {
+    public ArrayList<Chicken> getChickenCoop() {
         return chickenCoop;
     }
 
-    public void setChickenCoop(ArrayList<Integer> chickenCoop) {
-        this.chickenCoop = chickenCoop;
-    }
 
+
+    public void addChickens(int num){
+            for(int i = 0; i < num; i++){
+                chickenCoop.add(new Chicken());
+            }
+
+    }
 
 }

@@ -17,6 +17,14 @@ public class Farmer extends Person implements Eater, Botanist, Rider {
 
     }
 
+    public void collect(Edible crop) {
+        Silo.increment(crop.toString());
+    }
+
+    public Integer sell(String crop, int num){
+        return Silo.removeFrom(crop,num);
+    }
+
     @Override
     public void mount(Rideable thing) {
 
@@ -28,9 +36,11 @@ public class Farmer extends Person implements Eater, Botanist, Rider {
     }
 
     @Override
-    public void ride(Horse h) {
+    public void ride(Rideable R) {
 
     }
+
+
 
     @Override
     public void plantCrop(Crop crop, CropRow row) {

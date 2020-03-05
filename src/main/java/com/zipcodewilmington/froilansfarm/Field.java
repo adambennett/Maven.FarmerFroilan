@@ -6,6 +6,10 @@ public class Field {
 
     private ArrayList<CropRow> cropRow;
 
+    public Field() {
+        cropRow = new ArrayList<>();
+    }
+
     public ArrayList<CropRow> getCropRow() {
         return cropRow;
     }

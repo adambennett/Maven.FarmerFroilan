@@ -15,6 +15,11 @@ public class Farm {
     public Farm() {
         stabs = new ArrayList<>();
         chickenCoops = new ArrayList<>();
+        for(int i = 0; i < 4; i++){
+            ChickenCoop c = new ChickenCoop();
+            chickenCoops.add(c);
+            c.addChickens(4);
+        }
         vehics = new ArrayList<>();
         house = new Farmhouse();
         field = new Field();
@@ -27,6 +32,8 @@ public class Farm {
     public void setChickenCoops(ArrayList<ChickenCoop> chickenCoops) {
         this.chickenCoops = chickenCoops;
     }
+
+
 
     public Field getField() {
         return field;

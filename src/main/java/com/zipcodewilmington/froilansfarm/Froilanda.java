@@ -8,10 +8,8 @@ public class Froilanda extends Farmer implements Pilot, Eater {
     private CropDuster cropDuster;
 
 
-    @Override
-    public void eatFood(Edible food) {
 
-    }
+
 
     public CropDuster getCropDuster() {
         return cropDuster;
@@ -19,5 +17,9 @@ public class Froilanda extends Farmer implements Pilot, Eater {
 
     public void setCropDuster(CropDuster cropDuster) {
         this.cropDuster = cropDuster;
+    }
+
+    public Boolean inspectCropDuster(){
+        return true;
     }
 }
