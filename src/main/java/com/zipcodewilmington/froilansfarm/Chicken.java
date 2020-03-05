@@ -13,4 +13,9 @@ public class Chicken extends Produce implements Animal {
     public Edible yield() {
         return isFertilized() ? null : getEdible().clone();
     }
+
+    @Override
+    public String makeNoise() {
+        return "Bock bock bock";
+    }
 }

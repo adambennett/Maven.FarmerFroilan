@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-import com.zipcodewilmington.froilansfarm.Crop;
 import com.zipcodewilmington.froilansfarm.Silo;
 
 public interface Eater {

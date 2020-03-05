@@ -16,12 +16,10 @@ public class ChickenCoop {
     }
 
 
-
     public void addChickens(int num){
-            for(int i = 0; i < num; i++){
-                chickenCoop.add(new Chicken());
-            }
-
+        for(int i = 0; i < num; i++){
+            chickenCoop.add(new Chicken());
+        }
     }
 
 }

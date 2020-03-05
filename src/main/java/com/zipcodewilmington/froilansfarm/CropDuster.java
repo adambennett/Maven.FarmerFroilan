@@ -18,4 +18,9 @@ public class CropDuster implements FarmVehicle, Aircraft {
             fertilize(row);
         }
     }
+
+    @Override
+    public String makeNoise() {
+        return "Skyvroom!";
+    }
 }

@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Person {
+import com.zipcodewilmington.froilansfarm.interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
+
+public class Person implements NoiseMaker, Eater {
     public String name;
 
     public Person() {}
@@ -11,5 +14,10 @@ public class Person {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String makeNoise() {
+        return "Hello!";
     }
 }

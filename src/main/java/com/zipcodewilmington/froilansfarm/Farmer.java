@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.interfaces.*;
 
-public class Farmer extends Person implements Eater, Botanist, Rider {
+public class Farmer extends Person implements Botanist, Rider {
     private Farm farm;
 
     public Farmer() {
